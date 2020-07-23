@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yinfeng.wypzh.widget.MarqueTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tvSick"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/item_sick_height"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:gravity="center"
+    android:minWidth="48dp"
+    android:padding="@dimen/dp_4"
+    android:text="高血压呀"
+    android:textColor="@color/cb5b5b5"
+    android:textSize="@dimen/sp12" />

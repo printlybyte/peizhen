@@ -1,0 +1,229 @@
+apply plugin: 'com.android.application'
+apply plugin: 'realm-android'
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+
+    defaultConfig {
+        applicationId rootProject.ext.android.applicationId
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        ndk {
+            //设置支持的SO库架构（开发者可以根据需要，选择一个或多个平台的so）
+//            abiFilters "armeabi", "armeabi-v7a", "arm64-v8a", "x86", "arm64-v8a", "x86_64"
+            abiFilters "armeabi-v7a", "arm64-v8a", "x86", "x86_64"
+        }
+
+    }
+    packagingOptions {
+//        exclude "lib/armeabi-v7a/libRSSupport.so"
+//        exclude "lib/mips/libRSSupport.so"
+//        exclude "lib/mips/librsjni.so"
+//        exclude "lib/arm64-v8a/librsjni.so"
+//        exclude "lib/x86/librsjni.so"
+//        exclude "lib/x86_64/librsjni.so"
+//        exclude "lib/arm64-v8a/libRSSupport.so"
+//        exclude "lib/armeabi-v7a/librsjni.so"
+//        exclude "lib/x86/libRSSupport.so"
+//        exclude "lib/x86_64/libRSSupport.so"
+//        exclude "org/json/HTTPTokener.java"
+//        exclude "org/json/JSONML.java"
+//        exclude "org/json/JSONArray.java"
+//        exclude "org/json/XML.java"
+//        exclude "org/json/CookieList.java"
+
+//        exclude 'META-INF/DEPENDENCIES'
+//        exclude 'META-INF/NOTICE'
+//        exclude 'META-INF/LICENSE'
+//        exclude 'META-INF/LICENSE.txt'
+//        exclude 'META-INF/NOTICE.txt'
+    }
+    lintOptions {
+        abortOnError false
+    }
+    signingConfigs {
+        release {
+            //keystore 文件放置的本地路径
+//            storeFile file("E:\\KeyStorePzh\\peizhen\\peizhen.jks")
+            storeFile file("/Users/asen/KeyStore/peizhen.jks")
+//            storePassword java.lang.System.console().readLine("\nEnter the StoreFile PassWord : ")
+            storePassword KEYSTORE_PASSWORD
+            keyAlias "peizhenjks"
+            keyPassword KEY_PASSWORD
+        }
+    }
+
+    buildTypes {
+        release {
+            debuggable true
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.txt'
+            zipAlignEnabled true
+            signingConfig signingConfigs.release
+        }
+    }
+    realm {
+        syncEnabled = true
+    }
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
+
+
+    //配置自定义打包名称
+    applicationVariants.all { variant ->
+        variant.outputs.all {
+            def fileName
+            def date = new Date()
+            def formattedDate = date.format('yyyyMMdd')
+            if (variant.buildType.name.equals('release')) {
+                fileName = "${variant.mergedFlavor.versionName}_release_${formattedDate}.apk"
+            } else if (variant.buildType.name.equals('debug')) {
+                fileName = "${variant.mergedFlavor.versionName}_debug_${formattedDate}.apk"
+            }
+            outputFileName = fileName;
+        }
+    }
+
+
+}
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation project(':wheelview')
+    implementation project(':beecloudsdk')
+    implementation project(':uikit')
+    implementation 'com.android.support:multidex:1.0.1'
+    implementation 'com.google.code.gson:gson:2.8.0'
+    implementation rootProject.ext.dependencies["appcompat-v7"]
+    implementation rootProject.ext.dependencies["support-v4"]
+    implementation rootProject.ext.dependencies["cardview"]
+    implementation rootProject.ext.dependencies["design"]
+    implementation rootProject.ext.dependencies["recyclerview"]
+
+    implementation rootProject.ext.dependencies["retrofit2"]
+    implementation rootProject.ext.dependencies["converter-scalars"]
+    implementation rootProject.ext.dependencies["converter-gson"]
+    implementation rootProject.ext.dependencies["adapter-rxjava2"]
+    implementation rootProject.ext.dependencies.rxlifecycle2
+    implementation rootProject.ext.dependencies.rxlifecomponents
+
+    implementation rootProject.ext.dependencies["tablayout"]
+    implementation rootProject.ext.dependencies["androideventbus"]
+    implementation rootProject.ext.dependencies["smartRefreshLayout"]
+    implementation rootProject.ext.dependencies["smartRefreshLayoutHeader"]
+
+    implementation rootProject.ext.dependencies["banner"]
+    implementation rootProject.ext.dependencies["BaseAdapterHelper"]
+
+    implementation rootProject.ext.dependencies["rxjava"]
+    implementation rootProject.ext.dependencies["rxandroid"]
+    implementation rootProject.ext.dependencies["rxbinding2"]
+    implementation rootProject.ext.dependencies["rxpermission2"]
+
+    implementation rootProject.ext.dependencies["constraint-layout"]
+
+
+    implementation rootProject.ext.dependencies["fragmentation"]
+
+    implementation rootProject.ext.dependencies["viewanimator"]
+    implementation rootProject.ext.dependencies["FlycoDialog"]
+    implementation rootProject.ext.dependencies["PhotoView"]
+    implementation rootProject.ext.dependencies["videoplayer"]
+    implementation rootProject.ext.dependencies["lottie"]
+    implementation rootProject.ext.dependencies["progressbar"]
+    implementation 'com.lzy.net:okgo:3.0.4'
+    implementation 'com.orhanobut:hawk:2.0.1'
+//    implementation 'com.github.tbruyelle:rxpermissions:0.10.2'
+
+
+    //    implementation rootProject.ext.dependencies["snaphelper"]
+
+
+    //    implementation rootProject.ext.dependencies["dagger"]
+
+    //    annotationProcessor rootProject.ext.dependencies["dagger-compiler"]
+
+    //    implementation rootProject.ext.dependencies["butterknife"]
+
+    //    annotationProcessor rootProject.ext.dependencies["butterknife-compiler"]
+    //    implementation rootProject.ext.dependencies["swipebacklayout"]
+    //    implementation rootProject.ext.dependencies["bottom-bar"]
+    //    implementation rootProject.ext.dependencies["ultra-ptr"]
+
+
+    //高德sdk
+
+//    //3D地图so及jar
+//    implementation 'com.amap.api:3dmap:6.4.0'
+//
+//    //定位功能
+//    implementation 'com.amap.api:location:4.2.0'
+//
+//    //搜索功能
+//    implementation 'com.amap.api:search:6.1.0'
+
+    //配合real 查看数据库
+
+    //    implementation 'com.facebook.stetho:stetho:1.5.0'
+
+    //    implementation 'com.uphyca:stetho_realm:2.1.0'
+
+    //阿里云
+    implementation 'com.aliyun.dpa:oss-android-sdk:+'
+
+    //网易云信
+
+    //    compile fileTree(dir: 'libs', include: '*.jar')
+
+    // 添加依赖。注意，版本号必须一致。
+
+    //    // 基础功能 (必需)
+
+//        implementation 'com.netease.nimlib:basesdk:5.6.1'
+
+    //
+
+    //    // 音视频和互动白板服务需要
+
+    //    implementation 'com.netease.nimlib:nrtc:5.6.1'
+
+    //
+
+    //    // 音视频需要
+
+    //    implementation 'com.netease.nimlib:avchat:5.6.1'
+
+    //
+
+    //    // 聊天室需要
+
+    //    implementation 'com.netease.nimlib:chatroom:5.6.1'
+
+    //
+
+    //    // 小米、华为、魅族、fcm 推送
+
+    //    implementation 'com.netease.nimlib:push:5.6.1'
+
+    //PushSDK必须依赖基础组件库，所以需要加入对应依赖
+    implementation 'com.umeng.sdk:common:1.5.3'
+    //PushSDK必须依赖utdid库，所以需要加入对应依赖
+    implementation 'com.umeng.sdk:utdid:1.1.5.3'
+    implementation 'com.umeng.sdk:push:4.2.0'
+
+    implementation 'com.umeng.sdk:push-xiaomi:1.0.0'
+
+    implementation 'com.umeng.sdk:push-huawei:1.0.0'
+
+    implementation 'com.umeng.sdk:push-meizu:1.0.0'
+}

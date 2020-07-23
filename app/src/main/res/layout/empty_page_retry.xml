@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <!--<com.airbnb.lottie.LottieAnimationView xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--android:id="@+id/animation_view"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--app:lottie_autoPlay="true"-->
+    <!--app:lottie_fileName="lottiejsonfile/cloud_disconnection.json"-->
+    <!--app:lottie_loop="true"-->
+    <!--app:lottie_scale="1" />-->
+    <!--app:lottie_fileName="anim/sz_loading.json"-->
+
+    <ImageView
+        android:id="@+id/ivRetry"
+        android:layout_width="@dimen/dp140"
+        android:layout_height="@dimen/dp187"
+        android:src="@drawable/empty_nonet" />
+
+    <TextView
+        android:id="@+id/tvRetry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp18"
+        android:gravity="center"
+        android:text="操作失败，请重试"
+        android:textColor="@color/c434343"
+        android:textSize="@dimen/sp12" />
+</LinearLayout>

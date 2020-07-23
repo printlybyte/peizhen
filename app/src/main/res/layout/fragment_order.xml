@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cf7f8f8"
+    android:orientation="vertical">
+
+    <com.yinfeng.wypzh.widget.TopBar
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.flyco.tablayout.SlidingTabLayout
+        android:id="@+id/mSlidingTabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp50"
+        android:background="@android:color/white"
+        android:overScrollMode="never"
+        android:paddingLeft="@dimen/dp12"
+        android:paddingRight="@dimen/dp12"
+        tl:tl_indicator_color="@color/c06b49b"
+        tl:tl_indicator_gravity="BOTTOM"
+        tl:tl_indicator_width_equal_title="true"
+        tl:tl_tab_space_equal="true"
+        tl:tl_textSelectColor="@color/c06b49b"
+        tl:tl_textUnselectColor="@color/c434343"
+        tl:tl_textsize="@dimen/sp_12"
+        tl:tl_underline_height="@dimen/px_1" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/mViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never" />
+</LinearLayout>

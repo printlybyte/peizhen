@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cf7f8f8"
+    android:orientation="vertical">
+
+    <com.yinfeng.wypzh.widget.TopBar
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!--<com.scwang.smartrefresh.layout.SmartRefreshLayout-->
+        <!--android:id="@+id/mSmartRefreshLayout"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:overScrollMode="never">-->
+
+        <!--<android.support.v7.widget.RecyclerView-->
+        <!--android:id="@+id/mRecyclerView"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="@dimen/dp12"-->
+        <!--android:layout_marginRight="@dimen/dp12"-->
+        <!--android:overScrollMode="never"-->
+        <!--/>-->
+        <!--<ScrollView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:overScrollMode="never"-->
+            <!--android:scrollbars="none">-->
+
+            <LinearLayout
+                android:id="@+id/container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/llOrderNotice"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp60"
+                    android:layout_marginBottom="@dimen/dp12"
+                    android:layout_marginLeft="@dimen/dp12"
+                    android:layout_marginRight="@dimen/dp12"
+                    android:layout_marginTop="@dimen/dp12"
+                    android:background="@drawable/shape_white_solid_corner_small"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/dp12"
+                    android:paddingRight="@dimen/dp12">
+
+                    <RelativeLayout
+                        android:id="@+id/rlIcon"
+                        android:layout_width="@dimen/dp56"
+                        android:layout_height="@dimen/dp56">
+
+                        <ImageView
+                            android:id="@+id/ivIcon"
+                            android:layout_width="@dimen/dp48"
+                            android:layout_height="@dimen/dp48"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/message_message" />
+
+                        <View
+                            android:id="@+id/redPoint"
+                            android:layout_width="@dimen/dp8"
+                            android:layout_height="@dimen/dp8"
+                            android:layout_marginRight="6dp"
+                            android:layout_marginTop="6dp"
+                            android:layout_alignRight="@id/ivIcon"
+                            android:layout_alignTop="@id/ivIcon"
+                            android:background="@drawable/shape_oval_red" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/dp5"
+                        android:gravity="center_vertical|left"
+                        android:text="订单提醒"
+                        android:textColor="@color/c434343"
+                        android:textSize="@dimen/sp14" />
+                </LinearLayout>
+
+
+                <fragment
+                    android:id="@+id/mIMListFragment"
+                    android:name="com.netease.nim.uikit.business.recent.RecentContactsFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dp12"
+                    android:layout_marginRight="@dimen/dp12" />
+            </LinearLayout>
+        <!--</ScrollView>-->
+    <!--</com.scwang.smartrefresh.layout.SmartRefreshLayout>-->
+</LinearLayout>

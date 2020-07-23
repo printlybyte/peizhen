@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cf7f8f8"
+    android:orientation="vertical"
+    tools:context=".ui.mine.SetActivity">
+
+    <com.yinfeng.wypzh.widget.TopBar
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/mSmartRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/llUserInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp50"
+                    android:layout_marginLeft="@dimen/dp12"
+                    android:layout_marginRight="@dimen/dp12"
+                    android:layout_marginTop="@dimen/dp12"
+                    android:background="@drawable/ripple_white_solid_corner2"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/dp12">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp28"
+                        android:layout_height="@dimen/dp26"
+                        android:src="@drawable/set_userinfo" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/dp6"
+                        android:gravity="center"
+                        android:text="个人信息"
+                        android:textColor="@color/c434343"
+                        android:textSize="@dimen/sp14" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llCleanCache"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp50"
+                    android:layout_marginLeft="@dimen/dp12"
+                    android:layout_marginRight="@dimen/dp12"
+                    android:layout_marginTop="@dimen/dp6"
+                    android:background="@drawable/ripple_white_solid_corner2"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/dp12">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp28"
+                        android:layout_height="@dimen/dp26"
+                        android:src="@drawable/set_cleancache" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/dp6"
+                        android:gravity="center"
+                        android:text="清空缓存"
+                        android:textColor="@color/c434343"
+                        android:textSize="@dimen/sp14" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llAbout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp50"
+                    android:layout_marginLeft="@dimen/dp12"
+                    android:layout_marginRight="@dimen/dp12"
+                    android:layout_marginTop="@dimen/dp6"
+                    android:background="@drawable/ripple_white_solid_corner2"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/dp12">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp28"
+                        android:layout_height="@dimen/dp26"
+                        android:src="@drawable/set_about" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/dp6"
+                        android:gravity="center"
+                        android:text="关于陪诊"
+                        android:textColor="@color/c434343"
+                        android:textSize="@dimen/sp14" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlCheckVersion"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp50"
+                    android:layout_marginLeft="@dimen/dp12"
+                    android:layout_marginRight="@dimen/dp12"
+                    android:layout_marginTop="@dimen/dp6"
+                    android:background="@drawable/ripple_white_solid_corner2"
+                    android:paddingLeft="@dimen/dp12">
+
+                    <ImageView
+                        android:id="@+id/ivCheckVersion"
+                        android:layout_width="@dimen/dp28"
+                        android:layout_height="@dimen/dp26"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/set_checkversion" />
+
+                    <TextView
+                        android:id="@+id/tvCheckVersion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/dp6"
+                        android:layout_toRightOf="@id/ivCheckVersion"
+                        android:gravity="center"
+                        android:text="检查更新"
+                        android:textColor="@color/c434343"
+                        android:textSize="@dimen/sp14" />
+
+                    <ImageView
+                        android:id="@+id/ivRedPoint"
+                        android:layout_width="@dimen/dp8"
+                        android:layout_height="@dimen/dp8"
+                        android:layout_marginLeft="@dimen/dp6"
+                        android:layout_marginTop="@dimen/dp16"
+                        android:layout_toRightOf="@id/tvCheckVersion"
+                        android:background="@drawable/shape_oval_red"
+                        android:visibility="invisible" />
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/btExit"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp34"
+                    android:layout_marginBottom="@dimen/dp12"
+                    android:layout_marginLeft="@dimen/dp12"
+                    android:layout_marginRight="@dimen/dp12"
+                    android:layout_marginTop="@dimen/dp24"
+                    android:background="@drawable/shape_green_solid_corner"
+                    android:text="退出登录"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+        </ScrollView>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</LinearLayout>

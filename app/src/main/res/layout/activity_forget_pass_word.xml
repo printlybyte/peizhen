@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cf7f8f8"
+    tools:context=".ui.login.LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/dp30">
+        <!--android:paddingLeft="@dimen/dp30"-->
+        <!--android:paddingRight="@dimen/dp30"-->
+        <ImageView
+            android:layout_width="@dimen/dp78"
+            android:layout_height="@dimen/dp77"
+            android:scaleType="centerInside"
+            android:src="@drawable/hp_logo" />
+        <!--<ImageView-->
+        <!--android:layout_width="@dimen/dp76"-->
+        <!--android:layout_height="@dimen/dp86"-->
+        <!--android:src="@drawable/login_logo" />-->
+
+        <EditText
+            android:id="@+id/etPhone"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp48"
+            android:layout_marginLeft="@dimen/dp30"
+            android:layout_marginRight="@dimen/dp30"
+            android:layout_marginTop="@dimen/dp30"
+            android:background="@drawable/shape_white_solid_corner_small"
+            android:gravity="center_vertical|left"
+            android:hint="@string/register_phone_hint"
+            android:imeOptions="actionNext"
+            android:inputType="phone"
+            android:maxLength="11"
+            android:paddingLeft="@dimen/dp21"
+            android:singleLine="true"
+            android:textColor="@color/c434343"
+            android:textColorHint="@color/cb5b5b5"
+            android:textSize="@dimen/sp14" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp48"
+            android:layout_marginLeft="@dimen/dp30"
+            android:layout_marginRight="@dimen/dp30"
+            android:layout_marginTop="@dimen/dp8"
+            android:background="@drawable/shape_white_solid_corner_small">
+
+            <ImageView
+                android:id="@+id/ivHideOrOpen"
+                android:layout_width="@dimen/dp27"
+                android:layout_height="@dimen/dp17"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dp21"
+                android:src="@drawable/show" />
+
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp48"
+                android:layout_toLeftOf="@id/ivHideOrOpen"
+                android:background="@null"
+                android:gravity="center_vertical|left"
+                android:hint="@string/register_psw_hint"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLength="20"
+                android:paddingLeft="@dimen/dp21"
+                android:singleLine="true"
+                android:textColor="@color/c434343"
+                android:textColorHint="@color/cb5b5b5"
+                android:textSize="@dimen/sp14" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp48"
+            android:layout_marginLeft="@dimen/dp30"
+            android:layout_marginRight="@dimen/dp30"
+            android:layout_marginTop="@dimen/dp8"
+            android:background="@drawable/shape_white_solid_corner_small">
+
+            <TextView
+                android:id="@+id/tvGetSynccode"
+                android:layout_width="@dimen/dp93"
+                android:layout_height="@dimen/dp48"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/shape_green_solid_right_halfcorners"
+                android:gravity="center"
+                android:text="@string/register_get_synccode"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/sp12" />
+
+            <EditText
+                android:id="@+id/etSyccode"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp48"
+                android:layout_toLeftOf="@id/tvGetSynccode"
+                android:background="@null"
+                android:gravity="center_vertical|left"
+                android:hint="@string/register_synccode_hint"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLength="20"
+                android:paddingLeft="@dimen/dp21"
+                android:singleLine="true"
+                android:textColor="@color/c434343"
+                android:textColorHint="@color/cb5b5b5"
+                android:textSize="@dimen/sp14" />
+
+        </RelativeLayout>
+
+
+        <Button
+            android:id="@+id/btComplete"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp33"
+            android:layout_marginBottom="@dimen/dp36"
+            android:layout_marginLeft="@dimen/dp30"
+            android:layout_marginRight="@dimen/dp30"
+            android:layout_marginTop="@dimen/dp48"
+            android:background="@drawable/shape_green_solid_corner"
+            android:gravity="center"
+            android:text="@string/fillinfo_complete"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp16" />
+
+    </LinearLayout>
+</RelativeLayout>

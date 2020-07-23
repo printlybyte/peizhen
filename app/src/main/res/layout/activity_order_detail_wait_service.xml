@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cf7f8f8"
+    android:orientation="vertical"
+    tools:context=".ui.order.OrderDetailWaitService">
+
+    <com.yinfeng.wypzh.widget.TopBar
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/mSmartRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/dp12"
+                android:paddingRight="@dimen/dp12">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:id="@+id/rlWarningRemain"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp33"
+                        android:layout_marginTop="@dimen/dp12"
+                        android:background="@drawable/shape_white_solid_corner_small">
+
+                        <ImageView
+                            android:id="@+id/ivWarningRemain"
+                            android:layout_width="@dimen/dp17"
+                            android:layout_height="@dimen/dp17"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/dp12"
+                            android:src="@drawable/warning_order" />
+
+                        <TextView
+                            android:id="@+id/tvRemainTip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/dp6"
+                            android:layout_toRightOf="@id/ivWarningRemain"
+                            android:gravity="center"
+                            android:text="@string/orderwaitservice_time_remain"
+                            android:textSize="@dimen/sp14" />
+
+                        <TextView
+                            android:id="@+id/tvTimeRemain"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="@dimen/dp12"
+                            android:gravity="center_vertical|right"
+                            android:text="0 时 30 分 59 秒"
+                            android:textColor="@color/c06b49b"
+                            android:textSize="@dimen/sp14" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlWarningOut"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp33"
+                        android:layout_marginTop="@dimen/dp12"
+                        android:background="@drawable/shape_white_solid_corner_small"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/ivWarningOut"
+                            android:layout_width="@dimen/dp17"
+                            android:layout_height="@dimen/dp17"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/dp12"
+                            android:src="@drawable/warning_order" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/dp6"
+                            android:layout_toRightOf="@id/ivWarningOut"
+                            android:gravity="center"
+                            android:text="@string/orderwaitservice_time_out" />
+
+                        <TextView
+                            android:id="@+id/tvTimeOut"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="@dimen/dp12"
+                            android:gravity="center_vertical|right"
+                            android:text="30 分 59 秒"
+                            android:textColor="@color/c06b49b"
+                            android:textSize="@dimen/sp14" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/rlPzyInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp80"
+                    android:layout_marginTop="@dimen/dp6"
+                    android:background="@drawable/shape_white_solid_corner_small"
+                    android:padding="@dimen/dp12">
+
+                    <ImageView
+                        android:id="@+id/ivHeadIcon"
+                        android:layout_width="@dimen/dp40"
+                        android:layout_height="@dimen/dp40"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/head_default_order_servicing" />
+
+                    <ImageView
+                        android:id="@+id/ivPhone"
+                        android:layout_width="@dimen/dp36"
+                        android:layout_height="@dimen/dp36"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:padding="@dimen/dp4"
+                        android:src="@drawable/phone_order_servicing" />
+
+                    <ImageView
+                        android:id="@+id/ivMsg"
+                        android:layout_width="@dimen/dp36"
+                        android:layout_height="@dimen/dp36"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dp6"
+                        android:layout_toLeftOf="@id/ivPhone"
+                        android:padding="@dimen/dp4"
+                        android:src="@drawable/msg_wait_service" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dp12"
+                        android:layout_marginRight="@dimen/dp12"
+                        android:layout_toLeftOf="@id/ivMsg"
+                        android:layout_toRightOf="@id/ivHeadIcon"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:text="周晓彤"
+                            android:textColor="@color/c434343"
+                            android:textSize="@dimen/sp16" />
+
+                        <TextView
+                            android:id="@+id/tvPhone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp6"
+                            android:gravity="left"
+                            android:text="联系电话：13678907654"
+                            android:textColor="@color/cb5b5b5"
+                            android:textSize="@dimen/sp12" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp36"
+                    android:layout_marginTop="@dimen/dp6"
+                    android:background="@drawable/shape_white_solid_corner_small"
+                    android:gravity="center_vertical|left"
+                    android:paddingLeft="@dimen/dp12"
+                    android:paddingRight="@dimen/dp12"
+                    android:text="@string/orderpay_orderinfo"
+                    android:textColor="@color/c434343" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp6"
+                    android:background="@drawable/shape_white_solid_corner_small"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dp12">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvOrderId"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical|left"
+                            android:textColor="@color/cb5b5b5"
+                            android:textSize="@dimen/sp12" />
+
+                        <TextView
+                            android:id="@+id/tvOrderTime"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical|right"
+                            android:textColor="@color/cb5b5b5"
+                            android:textSize="@dimen/sp12" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp6"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical|left"
+                            android:text="@string/orderpay_servicetime"
+                            android:textColor="@color/c434343"
+                            android:textSize="@dimen/sp12" />
+
+                        <TextView
+                            android:id="@+id/tvServiceTime"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp6"
+                            android:gravity="center_vertical|right"
+                            android:textColor="@color/c434343"
+                            android:textSize="@dimen/sp12" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp6"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical|left"
+                            android:text="@string/orderpay_serviceaddress"
+                            android:textColor="@color/c434343"
+                            android:textSize="@dimen/sp12" />
+
+                        <TextView
+                            android:id="@+id/tvServiceAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp6"
+                            android:gravity="center_vertical|right"
+                            android:textColor="@color/c434343"
+                            android:textSize="@dimen/sp12" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp6"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical|left"
+                            android:text="@string/orderpay_serviceask"
+                            android:textColor="@color/c434343"
+                            android:textSize="@dimen/sp12" />
+
+                        <TextView
+                            android:id="@+id/tvServiceAsk"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp6"
+                            android:gravity="center_vertical|right"
+                            android:textColor="@color/c434343"
+                            android:textSize="@dimen/sp12" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp36"
+                    android:layout_marginTop="@dimen/dp6"
+                    android:background="@drawable/shape_white_solid_corner_small"
+                    android:paddingLeft="@dimen/dp12"
+                    android:paddingRight="@dimen/dp12">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical|left"
+                        android:text="@string/order_price"
+                        android:textColor="@color/c434343" />
+
+                    <TextView
+                        android:id="@+id/tvFinalPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center_vertical|right"
+                        android:text="99.99"
+                        android:textColor="@color/c06b49b" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp48"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvCancelOrder"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:text="取消订单"
+            android:textColor="@color/c434343"
+            android:textSize="@dimen/sp14" />
+
+        <TextView
+            android:id="@+id/tvConfirmService"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/c06b49b"
+            android:gravity="center"
+            android:text="确认开始服务"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp14" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cf7f8f8"
+    android:orientation="vertical"
+    tools:context=".ui.order.OrderDetailWaitService">
+
+    <com.yinfeng.wypzh.widget.TopBar
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/mSmartRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/dp12"
+                android:paddingRight="@dimen/dp12">
+
+                <ImageView
+                    android:layout_width="@dimen/dp167"
+                    android:layout_height="@dimen/dp167"
+                    android:layout_marginTop="@dimen/dp24"
+                    android:src="@drawable/sharetopicon" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp12"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="@dimen/dp68"
+                        android:layout_height="@dimen/px_1"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/cb5b5b5" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/dp8"
+                        android:layout_marginRight="@dimen/dp8"
+                        android:gravity="center"
+                        android:text="分享给"
+                        android:textColor="@color/c434343"
+                        android:textSize="@dimen/sp16" />
+
+                    <View
+                        android:layout_width="@dimen/dp68"
+                        android:layout_height="@dimen/px_1"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/cb5b5b5" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp12"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/ivWXhy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dp36"
+                            android:layout_gravity="center_horizontal"
+                            android:src="@drawable/wxhy" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="@dimen/dp12"
+                            android:gravity="center"
+                            android:text="微信好友"
+                            android:textColorHint="@color/c434343"
+                            android:textSize="@dimen/sp12" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp36"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/ivWXpyq"
+                            android:layout_width="@dimen/dp36"
+                            android:layout_height="@dimen/dp36"
+                            android:layout_gravity="center_horizontal"
+                            android:src="@drawable/wxpyq" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="@dimen/dp12"
+                            android:gravity="center"
+                            android:text="朋友圈"
+                            android:textColorHint="@color/c434343"
+                            android:textSize="@dimen/sp12" />
+                    </LinearLayout>
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginLeft="@dimen/dp36"-->
+                        <!--android:gravity="center_horizontal"-->
+                        <!--android:orientation="vertical">-->
+
+                        <!--<ImageView-->
+                            <!--android:id="@+id/ivQQhy"-->
+                            <!--android:layout_width="@dimen/dp36"-->
+                            <!--android:layout_height="@dimen/dp36"-->
+                            <!--android:layout_gravity="center_horizontal"-->
+                            <!--android:src="@drawable/qqhy" />-->
+
+                        <!--<TextView-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_gravity="center_horizontal"-->
+                            <!--android:layout_marginTop="@dimen/dp12"-->
+                            <!--android:gravity="center"-->
+                            <!--android:text="QQ好友"-->
+                            <!--android:textColorHint="@color/c434343"-->
+                            <!--android:textSize="@dimen/sp12" />-->
+                    <!--</LinearLayout>-->
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp24"
+                    android:background="@drawable/shape_white_solid_corner_small"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dp12">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical|left"
+                        android:text="赢取规则："
+                        android:textColor="@color/c434343"
+                        android:textSize="@dimen/sp16" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp12"
+                        android:gravity="center_vertical|left"
+                        android:text="1、在个人中心点击邀请有礼，将本页面发送给您的微信好友或分享到微信朋友圈。"
+                        android:textColor="@color/c434343"
+                        android:textSize="@dimen/sp12" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp6"
+                        android:gravity="center_vertical|left"
+                        android:text="2、如果您的好友通过您分享的链接下载无忧陪诊APP并注册登录，累计邀请成功至少三个好友，您将会获得一次免单陪诊的机会。"
+                        android:textColor="@color/c434343"
+                        android:textSize="@dimen/sp12" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</LinearLayout>

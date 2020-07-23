@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal" />
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="8"
+        android:background="@drawable/shape_white_solid_corner_small">
+
+        <LinearLayout
+            android:id="@+id/llAll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_white_solid_corner_small"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp18"
+                android:layout_marginRight="@dimen/dp18"
+                android:layout_marginTop="@dimen/dp18"
+                android:gravity="center_vertical|left"
+                android:text="延时服务"
+                android:textColor="@color/c06b49b"
+                android:textSize="@dimen/sp16" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp18"
+                android:layout_marginRight="@dimen/dp18"
+                android:layout_marginTop="@dimen/dp8"
+                android:gravity="center_vertical|left"
+                android:text="如需继续服务，请点击“延长时间”进行续时。"
+                android:textColor="@color/c434343"
+                android:textSize="@dimen/sp12" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp18"
+                android:layout_marginRight="@dimen/dp18"
+                android:layout_marginTop="@dimen/dp12"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|left"
+                    android:text="市场价"
+                    android:textColor="@color/c434343"
+                    android:textSize="@dimen/sp12" />
+
+                <TextView
+                    android:id="@+id/tvMarketPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp18"
+                    android:gravity="center_vertical|left"
+                    android:text="xx"
+                    android:textColor="@color/c06b49b"
+                    android:textSize="@dimen/sp12" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlItem"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp28"
+                android:layout_marginLeft="@dimen/dp18"
+                android:layout_marginRight="@dimen/dp18"
+                android:layout_marginTop="@dimen/dp16"
+                android:background="@drawable/shape_grey_solid_corner2"
+                android:paddingLeft="@dimen/dp12"
+                android:paddingRight="@dimen/dp12">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|left"
+                    android:text="请选择延长时间"
+                    android:textSize="@dimen/sp12" />
+
+                <LinearLayout
+                    android:id="@+id/llTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center_vertical|right"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvTime"
+                        android:layout_width="@dimen/dp48"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/dp2"
+                        android:gravity="center_vertical|left"
+                        android:text="120分钟"
+                        android:textColor="@color/c434343"
+                        android:textSize="@dimen/sp12" />
+
+                    <ImageView
+                        android:layout_width="@dimen/dp10"
+                        android:layout_height="@dimen/dp6"
+                        android:src="@drawable/arrow_expand_down" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp28"
+                android:layout_marginLeft="@dimen/dp18"
+                android:layout_marginRight="@dimen/dp18"
+                android:layout_marginTop="@dimen/dp12"
+                android:background="@drawable/shape_grey_solid_corner2"
+                android:paddingLeft="@dimen/dp12"
+                android:paddingRight="@dimen/dp12">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|left"
+                    android:text="推广价"
+                    android:textSize="@dimen/sp12" />
+
+                <TextView
+                    android:id="@+id/tvPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center_vertical|right"
+                    android:textColor="@color/c06b49b"
+                    android:textSize="@dimen/sp12" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp40"
+                android:layout_marginTop="@dimen/dp24"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvCancel"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_cancelorder_cancel"
+                    android:gravity="center"
+                    android:text="关闭"
+                    android:textColor="@color/c434343"
+                    android:textSize="@dimen/sp14" />
+
+                <TextView
+                    android:id="@+id/tvConfirm"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_cancelorder_confirm"
+                    android:gravity="center"
+                    android:text="提交"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/sp14" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/mRecyclerView"
+            android:layout_width="@dimen/dp86"
+            android:layout_height="@dimen/dp132"
+            android:layout_alignBottom="@id/llAll"
+            android:layout_alignRight="@id/llAll"
+            android:layout_marginRight="@dimen/dp18"
+            android:background="@color/ce5e5e5e"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal" />
+
+</LinearLayout>

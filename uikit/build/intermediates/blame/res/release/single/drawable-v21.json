@@ -1,0 +1,38 @@
+[
+    {
+        "merged": "/Users/asen/workspacePz/uikit/build/intermediates/res/merged/release/drawable-v21/abc_action_bar_item_background_material.xml",
+        "source": "/Users/asen/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/670a82f16a90d9c340e2a38947c5a5d6/res/drawable-v21/abc_action_bar_item_background_material.xml"
+    },
+    {
+        "merged": "/Users/asen/workspacePz/uikit/build/intermediates/res/merged/release/drawable-v21/avd_hide_password.xml",
+        "source": "/Users/asen/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/878808c6f77e914dbbc521e17af468b0/res/drawable-v21/avd_hide_password.xml"
+    },
+    {
+        "merged": "/Users/asen/workspacePz/uikit/build/intermediates/res/merged/release/drawable-v21/nim_touch_bg.xml",
+        "source": "/Users/asen/workspacePz/uikit/res/drawable-v21/nim_touch_bg.xml"
+    },
+    {
+        "merged": "/Users/asen/workspacePz/uikit/build/intermediates/res/merged/release/drawable-v21/avd_show_password.xml",
+        "source": "/Users/asen/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/878808c6f77e914dbbc521e17af468b0/res/drawable-v21/avd_show_password.xml"
+    },
+    {
+        "merged": "/Users/asen/workspacePz/uikit/build/intermediates/res/merged/release/drawable-v21/abc_btn_colored_material.xml",
+        "source": "/Users/asen/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/670a82f16a90d9c340e2a38947c5a5d6/res/drawable-v21/abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "/Users/asen/workspacePz/uikit/build/intermediates/res/merged/release/drawable-v21/notification_action_background.xml",
+        "source": "/Users/asen/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/88d7e2a1338ff095a8a22f12eef1ccde/res/drawable-v21/notification_action_background.xml"
+    },
+    {
+        "merged": "/Users/asen/workspacePz/uikit/build/intermediates/res/merged/release/drawable-v21/abc_edit_text_material.xml",
+        "source": "/Users/asen/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/670a82f16a90d9c340e2a38947c5a5d6/res/drawable-v21/abc_edit_text_material.xml"
+    },
+    {
+        "merged": "/Users/asen/workspacePz/uikit/build/intermediates/res/merged/release/drawable-v21/design_password_eye.xml",
+        "source": "/Users/asen/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/878808c6f77e914dbbc521e17af468b0/res/drawable-v21/design_password_eye.xml"
+    },
+    {
+        "merged": "/Users/asen/workspacePz/uikit/build/intermediates/res/merged/release/drawable-v21/design_bottom_navigation_item_background.xml",
+        "source": "/Users/asen/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/878808c6f77e914dbbc521e17af468b0/res/drawable-v21/design_bottom_navigation_item_background.xml"
+    }
+]

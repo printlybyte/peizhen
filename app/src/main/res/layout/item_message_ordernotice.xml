@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llItem"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp50"
+    android:layout_marginBottom="@dimen/dp12"
+    android:layout_marginTop="@dimen/dp12"
+    android:background="@drawable/shape_white_solid_corner_small"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/dp12"
+    android:paddingRight="@dimen/dp12">
+
+    <RelativeLayout
+        android:id="@+id/rlIcon"
+        android:layout_width="@dimen/dp43"
+        android:layout_height="@dimen/dp50">
+
+        <ImageView
+            android:id="@+id/ivIcon"
+            android:layout_width="@dimen/dp36"
+            android:layout_height="@dimen/dp36"
+            android:layout_centerVertical="true"
+            android:src="@drawable/message_message" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/dp5"
+        android:gravity="center_vertical|left"
+        android:text="订单提醒"
+        android:textColor="@color/c434343"
+        android:textSize="@dimen/sp14" />
+</LinearLayout>

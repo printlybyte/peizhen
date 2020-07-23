@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cf7f8f8"
+    android:orientation="vertical"
+    tools:context=".ui.order.OrderDetailWaitService">
+
+    <com.yinfeng.wypzh.widget.TopBar
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/mSmartRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/dp12"
+                android:paddingRight="@dimen/dp12">
+
+                <ImageView
+                    android:layout_width="@dimen/dp124"
+                    android:layout_height="@dimen/dp124"
+                    android:layout_marginTop="@dimen/dp24"
+                    android:src="@drawable/order_comment_success" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp12"
+                    android:gravity="center"
+                    android:text="感谢您的信赖与支持"
+                    android:textColorHint="@color/c434343"
+                    android:textSize="@dimen/sp16" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp6"
+                    android:gravity="center"
+                    android:text="我们将继续努力做到更好"
+                    android:textColorHint="@color/c434343"
+                    android:textSize="@dimen/sp12" />
+
+                <Button
+                    android:id="@+id/btShare"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp34"
+                    android:layout_marginTop="@dimen/dp48"
+                    android:background="@drawable/shape_green_solid_corner"
+                    android:gravity="center"
+                    android:text="分享给好友"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/sp16" />
+            </LinearLayout>
+        </ScrollView>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</LinearLayout>

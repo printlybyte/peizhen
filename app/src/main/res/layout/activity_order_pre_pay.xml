@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cf7f8f8"
+    android:orientation="vertical"
+    tools:context=".ui.order.OrderPrePayActivity">
+
+    <com.yinfeng.wypzh.widget.TopBar
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/mSmartRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="@dimen/dp12">
+
+                <!--顶部状态线-->
+                <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:orientation="horizontal">-->
+
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:orientation="vertical">-->
+
+                        <!--<RelativeLayout-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="@dimen/dp14">-->
+
+                            <!--<ImageView-->
+                                <!--android:id="@+id/ivOrderStateSubscribe"-->
+                                <!--android:layout_width="@dimen/dp12"-->
+                                <!--android:layout_height="@dimen/dp12"-->
+                                <!--android:layout_centerInParent="true"-->
+                                <!--android:src="@drawable/order_state_default" />-->
+
+                            <!--<View-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="@dimen/dp1"-->
+                                <!--android:layout_centerVertical="true"-->
+                                <!--android:layout_toLeftOf="@id/ivOrderStateSubscribe"-->
+                                <!--android:background="@color/c06b49b" />-->
+
+                            <!--<View-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="@dimen/dp1"-->
+                                <!--android:layout_centerVertical="true"-->
+                                <!--android:layout_toRightOf="@id/ivOrderStateSubscribe"-->
+                                <!--android:background="@color/c06b49b" />-->
+                        <!--</RelativeLayout>-->
+
+                        <!--<TextView-->
+                            <!--android:id="@+id/tvOrderStateSubscribe"-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_marginTop="@dimen/dp6"-->
+                            <!--android:gravity="center"-->
+                            <!--android:text="@string/orderpay_subscribe"-->
+                            <!--android:textColor="@color/c434343"-->
+                            <!--android:textSize="@dimen/sp12" />-->
+                    <!--</LinearLayout>-->
+
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:orientation="vertical">-->
+
+                        <!--<RelativeLayout-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="@dimen/dp14">-->
+
+                            <!--<ImageView-->
+                                <!--android:id="@+id/ivOrderStateOrderPay"-->
+                                <!--android:layout_width="@dimen/dp12"-->
+                                <!--android:layout_height="@dimen/dp12"-->
+                                <!--android:layout_centerInParent="true"-->
+                                <!--android:src="@drawable/order_state_now" />-->
+
+                            <!--<View-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="@dimen/dp1"-->
+                                <!--android:layout_centerVertical="true"-->
+                                <!--android:layout_toLeftOf="@id/ivOrderStateOrderPay"-->
+                                <!--android:background="@color/c06b49b" />-->
+
+                            <!--<View-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="@dimen/dp1"-->
+                                <!--android:layout_centerVertical="true"-->
+                                <!--android:layout_toRightOf="@id/ivOrderStateOrderPay"-->
+                                <!--android:background="@color/c06b49b" />-->
+                        <!--</RelativeLayout>-->
+
+                        <!--<TextView-->
+                            <!--android:id="@+id/tvOrderStateOrderPay"-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_marginTop="@dimen/dp6"-->
+                            <!--android:gravity="center"-->
+                            <!--android:text="@string/orderpay_orderpay"-->
+                            <!--android:textColor="@color/c434343"-->
+                            <!--android:textSize="@dimen/sp12" />-->
+                    <!--</LinearLayout>-->
+
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:orientation="vertical">-->
+
+                        <!--<RelativeLayout-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="@dimen/dp14">-->
+
+                            <!--<ImageView-->
+                                <!--android:id="@+id/ivOrderStateWaitService"-->
+                                <!--android:layout_width="@dimen/dp12"-->
+                                <!--android:layout_height="@dimen/dp12"-->
+                                <!--android:layout_centerInParent="true"-->
+                                <!--android:src="@drawable/order_state_default" />-->
+
+                            <!--<View-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="@dimen/dp1"-->
+                                <!--android:layout_centerVertical="true"-->
+                                <!--android:layout_toLeftOf="@id/ivOrderStateWaitService"-->
+                                <!--android:background="@color/c06b49b" />-->
+
+                            <!--<View-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="@dimen/dp1"-->
+                                <!--android:layout_centerVertical="true"-->
+                                <!--android:layout_toRightOf="@id/ivOrderStateWaitService"-->
+                                <!--android:background="@color/c06b49b" />-->
+                        <!--</RelativeLayout>-->
+
+                        <!--<TextView-->
+                            <!--android:id="@+id/tvOrderStateWaitService"-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_marginTop="@dimen/dp6"-->
+                            <!--android:gravity="center"-->
+                            <!--android:text="@string/orderpay_waitservice"-->
+                            <!--android:textColor="@color/c434343"-->
+                            <!--android:textSize="@dimen/sp12" />-->
+                    <!--</LinearLayout>-->
+
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:orientation="vertical">-->
+
+                        <!--<RelativeLayout-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="@dimen/dp14">-->
+
+                            <!--<ImageView-->
+                                <!--android:id="@+id/ivOrderStateServicing"-->
+                                <!--android:layout_width="@dimen/dp12"-->
+                                <!--android:layout_height="@dimen/dp12"-->
+                                <!--android:layout_centerInParent="true"-->
+                                <!--android:src="@drawable/order_state_default" />-->
+
+                            <!--<View-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="@dimen/dp1"-->
+                                <!--android:layout_centerVertical="true"-->
+                                <!--android:layout_toLeftOf="@id/ivOrderStateServicing"-->
+                                <!--android:background="@color/c06b49b" />-->
+
+                            <!--<View-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="@dimen/dp1"-->
+                                <!--android:layout_centerVertical="true"-->
+                                <!--android:layout_toRightOf="@id/ivOrderStateServicing"-->
+                                <!--android:background="@color/c06b49b" />-->
+                        <!--</RelativeLayout>-->
+
+                        <!--<TextView-->
+                            <!--android:id="@+id/tvOrderStateServicing"-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_marginTop="@dimen/dp6"-->
+                            <!--android:gravity="center"-->
+                            <!--android:text="@string/orderpay_servicing"-->
+                            <!--android:textColor="@color/c434343"-->
+                            <!--android:textSize="@dimen/sp12" />-->
+                    <!--</LinearLayout>-->
+
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:orientation="vertical">-->
+
+                        <!--<RelativeLayout-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="@dimen/dp14">-->
+
+                            <!--<ImageView-->
+                                <!--android:id="@+id/ivOrderStateConfirmComplete"-->
+                                <!--android:layout_width="@dimen/dp12"-->
+                                <!--android:layout_height="@dimen/dp12"-->
+                                <!--android:layout_centerInParent="true"-->
+                                <!--android:src="@drawable/order_state_default" />-->
+
+                            <!--<View-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="@dimen/dp1"-->
+                                <!--android:layout_centerVertical="true"-->
+                                <!--android:layout_toLeftOf="@id/ivOrderStateConfirmComplete"-->
+                                <!--android:background="@color/c06b49b" />-->
+
+                            <!--<View-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="@dimen/dp1"-->
+                                <!--android:layout_centerVertical="true"-->
+                                <!--android:layout_toRightOf="@id/ivOrderStateConfirmComplete"-->
+                                <!--android:background="@color/c06b49b" />-->
+                        <!--</RelativeLayout>-->
+
+                        <!--<TextView-->
+                            <!--android:id="@+id/tvOrderStateConfirm"-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_marginTop="@dimen/dp6"-->
+                            <!--android:gravity="center"-->
+                            <!--android:text="@string/orderpay_confirmcomplete"-->
+                            <!--android:textColor="@color/c434343"-->
+                            <!--android:textSize="@dimen/sp12" />-->
+                    <!--</LinearLayout>-->
+
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:orientation="vertical">-->
+
+                        <!--<RelativeLayout-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="@dimen/dp14">-->
+
+                            <!--<ImageView-->
+                                <!--android:id="@+id/ivOrderStateComment"-->
+                                <!--android:layout_width="@dimen/dp12"-->
+                                <!--android:layout_height="@dimen/dp12"-->
+                                <!--android:layout_centerInParent="true"-->
+                                <!--android:src="@drawable/order_state_default" />-->
+
+                            <!--<View-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="@dimen/dp1"-->
+                                <!--android:layout_centerVertical="true"-->
+                                <!--android:layout_toLeftOf="@id/ivOrderStateComment"-->
+                                <!--android:background="@color/c06b49b" />-->
+
+                            <!--<View-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="@dimen/dp1"-->
+                                <!--android:layout_centerVertical="true"-->
+                                <!--android:layout_toRightOf="@id/ivOrderStateComment"-->
+                                <!--android:background="@color/c06b49b" />-->
+                        <!--</RelativeLayout>-->
+
+                        <!--<TextView-->
+                            <!--android:id="@+id/tvOrderStateComment"-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_marginTop="@dimen/dp6"-->
+                            <!--android:gravity="center"-->
+                            <!--android:text="@string/orderpay_comment"-->
+                            <!--android:textColor="@color/c434343"-->
+                            <!--android:textSize="@dimen/sp12" />-->
+                    <!--</LinearLayout>-->
+                <!--</LinearLayout>-->
+                <!--顶部状态线-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp36"
+                    android:layout_marginTop="@dimen/dp12"
+                    android:background="@drawable/shape_white_solid_corner_small"
+                    android:gravity="center_vertical|left"
+                    android:paddingLeft="@dimen/dp12"
+                    android:text="@string/orderpay_orderinfo" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp4"
+                    android:background="@drawable/shape_white_solid_corner_small"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dp12">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvOrderId"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical|left"
+                            android:textColor="@color/cb5b5b5"
+                            android:textSize="@dimen/sp12" />
+
+                        <TextView
+                            android:id="@+id/tvOrderTime"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical|right"
+                            android:textColor="@color/cb5b5b5"
+                            android:textSize="@dimen/sp12" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp6"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical|left"
+                            android:text="@string/orderpay_servicetime"
+                            android:textColor="@color/c434343"
+                            android:textSize="@dimen/sp12" />
+
+                        <TextView
+                            android:id="@+id/tvServiceTime"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp6"
+                            android:gravity="center_vertical|right"
+                            android:textColor="@color/c434343"
+                            android:textSize="@dimen/sp12" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp6"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical|left"
+                            android:text="@string/orderpay_serviceaddress"
+                            android:textColor="@color/c434343"
+                            android:textSize="@dimen/sp12" />
+
+                        <TextView
+                            android:id="@+id/tvServiceAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp6"
+                            android:gravity="center_vertical|right"
+                            android:textColor="@color/c434343"
+                            android:textSize="@dimen/sp12" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp6"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical|left"
+                            android:text="@string/orderpay_serviceask"
+                            android:textColor="@color/c434343"
+                            android:textSize="@dimen/sp12" />
+
+                        <TextView
+                            android:id="@+id/tvServiceAsk"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp6"
+                            android:gravity="center_vertical|right"
+                            android:textColor="@color/c434343"
+                            android:textSize="@dimen/sp12" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp36"
+                    android:layout_marginTop="@dimen/dp12"
+                    android:background="@drawable/shape_white_solid_corner_small"
+                    android:paddingLeft="@dimen/dp12"
+                    android:paddingRight="@dimen/dp12">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical|left"
+                        android:text="@string/orderpay_serviceprice"
+                        android:textColor="@color/c434343"
+                        android:textSize="@dimen/sp14" />
+
+                    <TextView
+                        android:id="@+id/tvServicePrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center_vertical|right"
+                        android:text="￥100.00"
+                        android:textColor="@color/c06b49b"
+                        android:textSize="@dimen/sp14" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp36"
+                    android:layout_marginTop="@dimen/dp4"
+                    android:background="@drawable/shape_white_solid_corner_small"
+                    android:paddingLeft="@dimen/dp12"
+                    android:paddingRight="@dimen/dp12">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical|left"
+                        android:text="@string/orderpay_coupon"
+                        android:textColor="@color/c434343"
+                        android:textSize="@dimen/sp14" />
+
+                    <TextView
+                        android:id="@+id/tvcoupon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center_vertical|right"
+                        android:text="暂无优惠券可用"
+                        android:textColor="@color/cb5b5b5"
+                        android:textSize="@dimen/sp14" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp36"
+                    android:layout_marginTop="@dimen/dp4"
+                    android:background="@drawable/shape_white_solid_corner_small"
+                    android:paddingLeft="@dimen/dp12"
+                    android:paddingRight="@dimen/dp12">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical|left"
+                        android:text="@string/orderpay_finalprice"
+                        android:textColor="@color/c434343"
+                        android:textSize="@dimen/sp14" />
+
+                    <TextView
+                        android:id="@+id/tvFinalPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center_vertical|right"
+                        android:text="￥100.00"
+                        android:textColor="@color/c06b49b"
+                        android:textSize="@dimen/sp14" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp6"
+                    android:gravity="center"
+                    android:text="@string/orderpay_choosepaytype"
+                    android:textColor="#bababa"
+                    android:textSize="@dimen/sp12" />
+
+                <RelativeLayout
+                    android:id="@+id/rlzfb"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp50"
+                    android:background="@drawable/shape_white_solid_corner_small"
+                    android:paddingLeft="@dimen/dp12"
+                    android:paddingRight="@dimen/dp12">
+
+                    <ImageView
+                        android:id="@+id/iconzfb"
+                        android:layout_width="@dimen/dp24"
+                        android:layout_height="@dimen/dp24"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/icon_zfb_pay" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/dp8"
+                        android:layout_toRightOf="@id/iconzfb"
+                        android:gravity="center"
+                        android:text="@string/pay_zfb"
+                        android:textColor="@color/c434343"
+                        android:textSize="@dimen/sp14" />
+
+                    <ImageView
+                        android:id="@+id/ivzfbselect"
+                        android:layout_width="@dimen/dp24"
+                        android:layout_height="@dimen/dp24"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:padding="@dimen/dp6"
+                        android:src="@drawable/selected_oval" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlwx"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp50"
+                    android:layout_marginTop="@dimen/dp4"
+                    android:background="@drawable/shape_white_solid_corner_small"
+                    android:paddingLeft="@dimen/dp12"
+                    android:paddingRight="@dimen/dp12">
+
+                    <ImageView
+                        android:id="@+id/iconwx"
+                        android:layout_width="@dimen/dp24"
+                        android:layout_height="@dimen/dp24"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/icon_wx_pay" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/dp8"
+                        android:layout_toRightOf="@id/iconwx"
+                        android:gravity="center"
+                        android:text="@string/pay_wx"
+                        android:textColor="@color/c434343"
+                        android:textSize="@dimen/sp14" />
+
+                    <ImageView
+                        android:id="@+id/ivwxselect"
+                        android:layout_width="@dimen/dp24"
+                        android:layout_height="@dimen/dp24"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:padding="@dimen/dp6"
+                        android:src="@drawable/unselect_oval" />
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/btConfirmPay"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp33"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="@dimen/dp28"
+                    android:layout_marginTop="@dimen/dp28"
+                    android:background="@drawable/shape_green_solid_corner"
+                    android:gravity="center"
+                    android:text="@string/pay_confirm"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/sp16" />
+            </LinearLayout>
+        </ScrollView>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</LinearLayout>

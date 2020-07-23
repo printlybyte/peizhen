@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cf7f8f8"
+    android:orientation="vertical"
+    tools:context=".ui.order.OrderRenewPaySuccess">
+
+    <com.yinfeng.wypzh.widget.TopBar
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/mSmartRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/dp54"
+                    android:layout_height="@dimen/dp54"
+                    android:layout_marginTop="@dimen/dp36"
+                    android:src="@drawable/confirm_renew" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp24"
+                    android:gravity="center"
+                    android:text="您的延时服务申请已提报，请等待陪诊员确认"
+                    android:textColor="@color/c434343"
+                    android:textSize="@dimen/sp14" />
+
+                <TextView
+                    android:id="@+id/tvDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp4"
+                    android:gravity="center"
+                    android:textColor="@color/c898989"
+                    android:textSize="@dimen/sp12" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp36"
+                    android:layout_marginLeft="@dimen/dp12"
+                    android:layout_marginRight="@dimen/dp12"
+                    android:layout_marginTop="@dimen/dp24"
+                    android:background="@drawable/shape_white_solid_corner_small"
+                    android:gravity="center_vertical|left"
+                    android:paddingLeft="@dimen/dp12"
+                    android:paddingRight="@dimen/dp12"
+                    android:text="@string/orderpay_orderinfo"
+                    android:textColor="@color/c434343" />
+
+                <RelativeLayout
+                    android:id="@+id/rlPzyInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp80"
+                    android:layout_marginLeft="@dimen/dp12"
+                    android:layout_marginRight="@dimen/dp12"
+                    android:layout_marginTop="@dimen/dp6"
+                    android:background="@drawable/shape_white_solid_corner_small"
+                    android:padding="@dimen/dp12">
+
+                    <ImageView
+                        android:id="@+id/ivHeadIcon"
+                        android:layout_width="@dimen/dp40"
+                        android:layout_height="@dimen/dp40"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/head_default_order_servicing" />
+
+                    <ImageView
+                        android:id="@+id/ivPhone"
+                        android:layout_width="@dimen/dp36"
+                        android:layout_height="@dimen/dp36"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:padding="@dimen/dp4"
+                        android:src="@drawable/phone_order_servicing" />
+
+                    <ImageView
+                        android:id="@+id/ivMsg"
+                        android:layout_width="@dimen/dp36"
+                        android:layout_height="@dimen/dp36"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dp6"
+                        android:layout_toLeftOf="@id/ivPhone"
+                        android:padding="@dimen/dp4"
+                        android:src="@drawable/msg_wait_service" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dp12"
+                        android:layout_marginRight="@dimen/dp12"
+                        android:layout_toLeftOf="@id/ivMsg"
+                        android:layout_toRightOf="@id/ivHeadIcon"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:text="周晓彤"
+                            android:textColor="@color/c434343"
+                            android:textSize="@dimen/sp16" />
+
+                        <TextView
+                            android:id="@+id/tvPhone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp6"
+                            android:gravity="left"
+                            android:text="联系电话：13678907654"
+                            android:textColor="@color/cb5b5b5"
+                            android:textSize="@dimen/sp12" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/btConfirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp33"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="@dimen/dp24"
+                    android:layout_marginLeft="@dimen/dp12"
+                    android:layout_marginRight="@dimen/dp12"
+                    android:layout_marginTop="@dimen/dp36"
+                    android:background="@drawable/shape_green_solid_corner"
+                    android:gravity="center"
+                    android:text="确认"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/sp16" />
+            </LinearLayout>
+        </ScrollView>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</LinearLayout>

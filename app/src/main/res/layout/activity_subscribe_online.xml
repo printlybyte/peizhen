@@ -1,0 +1,579 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cf7f8f8"
+    android:orientation="vertical"
+    tools:context=".ui.homepage.SubscribeOnlineActivity">
+
+    <com.yinfeng.wypzh.widget.TopBar
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/mSmartRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="@dimen/dp12">
+
+                <RelativeLayout
+                    android:id="@+id/rlchooseperson"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp50"
+                    android:background="@drawable/shape_white_solid_corner_small"
+                    android:paddingLeft="@dimen/dp12"
+                    android:paddingRight="@dimen/dp12">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical"
+                        android:text="@string/subscribe_choose"
+                        android:textColor="@color/c434343"
+                        android:textSize="@dimen/sp14" />
+
+                    <LinearLayout
+                        android:id="@+id/llchooseperson"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_vertical|right"
+                            android:maxLength="8"
+                            android:maxLines="1"
+                            android:text="选择就诊人"
+                            android:textColor="@color/cb5b5b5"
+                            android:textSize="@dimen/sp14" />
+
+                        <ImageView
+                            android:id="@+id/ivArrowName"
+                            android:layout_width="@dimen/dp7"
+                            android:layout_height="@dimen/dp11"
+                            android:layout_marginLeft="@dimen/dp_4"
+                            android:src="@drawable/arrow_right_grey" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlchoosephone"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp50"
+                    android:layout_marginTop="@dimen/dp_4"
+                    android:background="@drawable/shape_white_solid_corner_small"
+                    android:paddingLeft="@dimen/dp12"
+                    android:paddingRight="@dimen/dp12">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical"
+                        android:text="@string/subscribe_phone_second"
+                        android:textColor="@color/c434343"
+                        android:textSize="@dimen/sp14" />
+
+                    <EditText
+                        android:id="@+id/etPhone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@null"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:gravity="center_vertical|right"
+                        android:hint="请输入电话"
+                        android:inputType="phone"
+                        android:maxLength="11"
+                        android:singleLine="true"
+                        android:textColor="@color/c434343"
+                        android:textColorHint="@color/cb5b5b5"
+                        android:textSize="@dimen/sp14" />
+                </RelativeLayout>
+                <!--<LinearLayout-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:gravity="center_vertical"-->
+                <!--android:orientation="horizontal">-->
+
+                <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:gravity="center_vertical"-->
+                <!--android:text="18210826888"-->
+                <!--android:textColor="@color/c434343"-->
+                <!--android:textSize="@dimen/sp14" />-->
+
+                <!--<ImageView-->
+                <!--android:layout_width="@dimen/dp7"-->
+                <!--android:layout_height="@dimen/dp11"-->
+                <!--android:layout_marginLeft="@dimen/dp_4"-->
+                <!--android:src="@drawable/arrow_right_dark" />-->
+                <!--</LinearLayout>-->
+
+                <LinearLayout
+                    android:id="@+id/llChooseTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_4"
+                    android:background="@drawable/shape_white_solid_corner_small"
+                    android:minHeight="@dimen/dp67"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/dp12"
+                    android:paddingRight="@dimen/dp12">
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp10">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_vertical"
+                            android:text="@string/subscribe_service_time"
+                            android:textColor="@color/c434343"
+                            android:textSize="@dimen/sp14" />
+
+                        <LinearLayout
+                            android:id="@+id/llTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tvTimeStart"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:gravity="center_vertical"
+                                android:text="@string/subscribe_time_start"
+                                android:textColor="@color/cb5b5b5"
+                                android:textSize="@dimen/sp14" />
+
+                            <View
+                                android:id="@+id/line"
+                                android:layout_width="@dimen/dp12"
+                                android:layout_height="@dimen/dp1"
+                                android:layout_marginLeft="@dimen/dp2"
+                                android:layout_marginRight="@dimen/dp2"
+                                android:background="@color/cb5b5b5" />
+
+                            <TextView
+                                android:id="@+id/tvTimeEnd"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:gravity="center_vertical"
+                                android:text="@string/subscribe_time_end"
+                                android:textColor="@color/cb5b5b5"
+                                android:textSize="@dimen/sp14" />
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginTop="@dimen/dp10"-->
+                        <!--android:gravity="center_vertical"-->
+                        <!--android:orientation="horizontal">-->
+
+                        <!--<TextView-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:gravity="center_vertical"-->
+                            <!--android:text="注: "-->
+                            <!--android:textColor="@color/c06b49b"-->
+                            <!--android:textSize="@dimen/sp12" />-->
+
+                        <!--<TextView-->
+                            <!--android:id="@+id/tvTimeTipOne"-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_gravity="center_vertical"-->
+                            <!--android:gravity="center_vertical"-->
+                            <!--android:textColor="@color/c06b49b"-->
+                            <!--android:textSize="@dimen/sp12" />-->
+
+                    <!--</LinearLayout>-->
+
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginBottom="@dimen/dp10"-->
+                        <!--android:layout_marginTop="@dimen/dp6"-->
+                        <!--android:gravity="center_vertical"-->
+                        <!--android:orientation="horizontal">-->
+
+                        <!--<TextView-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:gravity="center_vertical"-->
+                            <!--android:text="注: "-->
+                            <!--android:textColor="@color/cf7f8f8"-->
+                            <!--android:textSize="@dimen/sp12" />-->
+
+                        <!--<TextView-->
+                            <!--android:id="@+id/tvTimeTipTwo"-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:gravity="center_vertical"-->
+                            <!--android:textColor="@color/c06b49b"-->
+                            <!--android:textSize="@dimen/sp12" />-->
+
+                    <!--</LinearLayout>-->
+
+
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/rlchoosehospital"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp50"
+                    android:layout_marginTop="@dimen/dp_4"
+                    android:background="@drawable/shape_white_solid_corner_small"
+                    android:paddingLeft="@dimen/dp12"
+                    android:paddingRight="@dimen/dp12">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical"
+                        android:text="@string/subscribe_hospital"
+                        android:textColor="@color/c434343"
+                        android:textSize="@dimen/sp14" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvHospital"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_vertical"
+                            android:text="@string/subscribe_hospital_choose"
+                            android:textColor="@color/cb5b5b5"
+                            android:textSize="@dimen/sp14" />
+
+                        <ImageView
+                            android:id="@+id/ivArrowHospital"
+                            android:layout_width="@dimen/dp7"
+                            android:layout_height="@dimen/dp11"
+                            android:layout_marginLeft="@dimen/dp_4"
+                            android:src="@drawable/arrow_right_grey" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+
+                <!--<RelativeLayout-->
+                <!--android:id="@+id/rlchoosedepartment"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="@dimen/dp50"-->
+                <!--android:layout_marginTop="@dimen/dp_4"-->
+                <!--android:background="@drawable/shape_white_solid_corner_small"-->
+                <!--android:paddingLeft="@dimen/dp12"-->
+                <!--android:paddingRight="@dimen/dp12">-->
+
+                <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:gravity="center_vertical"-->
+                <!--android:text="@string/subscribe_department"-->
+                <!--android:textColor="@color/c434343"-->
+                <!--android:textSize="@dimen/sp14" />-->
+
+                <!--<LinearLayout-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:gravity="center_vertical"-->
+                <!--android:orientation="horizontal">-->
+
+                <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:gravity="center_vertical"-->
+                <!--android:text="@string/subscribe_department_choose"-->
+                <!--android:textColor="@color/cb5b5b5"-->
+                <!--android:textSize="@dimen/sp14" />-->
+
+                <!--<ImageView-->
+                <!--android:layout_width="@dimen/dp7"-->
+                <!--android:layout_height="@dimen/dp11"-->
+                <!--android:layout_marginLeft="@dimen/dp_4"-->
+                <!--android:src="@drawable/arrow_right_grey" />-->
+                <!--</LinearLayout>-->
+                <!--</RelativeLayout>-->
+                <RelativeLayout
+                    android:id="@+id/rlchoosedepartment"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp50"
+                    android:layout_marginTop="@dimen/dp_4"
+                    android:background="@drawable/shape_white_solid_corner_small"
+                    android:paddingLeft="@dimen/dp12"
+                    android:paddingRight="@dimen/dp12">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical"
+                        android:text="@string/subscribe_department"
+                        android:textColor="@color/c434343"
+                        android:textSize="@dimen/sp14" />
+
+                    <EditText
+                        android:id="@+id/etDepartment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@null"
+                        android:gravity="center_vertical|right"
+                        android:hint="请输入科室"
+                        android:maxLength="11"
+                        android:singleLine="true"
+                        android:textColor="@color/c434343"
+                        android:textColorHint="@color/cb5b5b5"
+                        android:textSize="@dimen/sp14" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_4"
+                    android:background="@drawable/shape_white_solid_corner_small"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/dp12"
+                    android:paddingRight="@dimen/dp12">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp14"
+                        android:text="@string/subscribe_remark"
+                        android:textColor="@color/c434343" />
+
+                    <EditText
+                        android:id="@+id/etRemark"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dp14"
+                        android:layout_marginLeft="@dimen/dp10"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:background="@drawable/shape_greystroke_whitesolid_corner"
+                        android:gravity="left"
+                        android:hint="@string/subscribe_remark_hint"
+                        android:lines="6"
+                        android:maxLength="100"
+                        android:padding="@dimen/dp10"
+                        android:textColorHint="@color/cb5b5b5"
+                        android:textSize="@dimen/sp12" />
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/rlcoupon"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp50"
+                    android:layout_marginTop="@dimen/dp_4"
+                    android:background="@drawable/shape_white_solid_corner_small"
+                    android:paddingLeft="@dimen/dp12"
+                    android:paddingRight="@dimen/dp12">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical"
+                        android:text="@string/subscribe_coupon"
+                        android:textColor="@color/c434343"
+                        android:textSize="@dimen/sp14" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvFreeVoucher"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_vertical"
+                            android:text="@string/subscribe_coupon_choose"
+                            android:textColor="@color/cb5b5b5"
+                            android:textSize="@dimen/sp14" />
+
+                        <ImageView
+                            android:id="@+id/ivArrowFreeVoucher"
+                            android:layout_width="@dimen/dp7"
+                            android:layout_height="@dimen/dp11"
+                            android:layout_marginLeft="@dimen/dp_4"
+                            android:src="@drawable/arrow_right_grey" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/rlserviceprice"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp50"
+                    android:layout_marginTop="@dimen/dp_4"
+                    android:background="@drawable/shape_white_solid_corner_small"
+                    android:paddingLeft="@dimen/dp12"
+                    android:paddingRight="@dimen/dp12">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical"
+                        android:text="@string/subscribe_service_price"
+                        android:textColor="@color/c434343"
+                        android:textSize="@dimen/sp14" />
+
+
+                    <TextView
+                        android:id="@+id/tvServicePrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical|right"
+                        android:text="￥100"
+                        android:textColor="@color/c06b49b"
+                        android:textSize="@dimen/sp14" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/rltotalcount"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp50"
+                    android:layout_marginTop="@dimen/dp_4"
+                    android:background="@drawable/shape_white_solid_corner_small"
+                    android:paddingLeft="@dimen/dp12"
+                    android:paddingRight="@dimen/dp12">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical"
+                        android:text="@string/subscribe_total_count"
+                        android:textColor="@color/c434343"
+                        android:textSize="@dimen/sp14" />
+
+
+                    <TextView
+                        android:id="@+id/tvTotalCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical|right"
+                        android:text="￥100"
+                        android:textColor="@color/c06b49b"
+                        android:textSize="@dimen/sp14" />
+
+                </RelativeLayout>
+
+                <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="@dimen/dp12"-->
+                <!--android:gravity="center_vertical|left"-->
+                <!--android:text="@string/subscribe_cancelorder_tip"-->
+                <!--android:textColor="@color/cb5b5b5"-->
+                <!--android:textSize="@dimen/sp12" />-->
+
+                <!--<Button-->
+                <!--android:id="@+id/btconfirmorder"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="@dimen/dp33"-->
+                <!--android:layout_gravity="center_horizontal"-->
+                <!--android:layout_marginBottom="@dimen/dp33"-->
+                <!--android:layout_marginTop="@dimen/dp26"-->
+                <!--android:background="@drawable/shape_green_solid_corner"-->
+                <!--android:text="@string/subscribe_confirm_order"-->
+                <!--android:textColor="@android:color/white"-->
+                <!--android:textSize="@dimen/sp16" />-->
+
+            </LinearLayout>
+        </ScrollView>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp56"
+        android:background="@color/cf7f8f8"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btconfirmorder"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp33"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/dp33"
+            android:layout_marginLeft="@dimen/dp12"
+            android:layout_marginRight="@dimen/dp12"
+            android:layout_marginTop="@dimen/dp26"
+            android:background="@drawable/shape_green_solid_corner"
+            android:text="@string/subscribe_confirm_order"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp16" />
+    </LinearLayout>
+</LinearLayout>

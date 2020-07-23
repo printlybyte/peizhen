@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvNoDataTip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/dp18"
+        android:gravity="center"
+        android:text="对不起，您还未有接到订单哦~"
+        android:textColor="@color/c898989"
+        android:textSize="@dimen/sp12" />
+
+    <ImageView
+        android:id="@+id/ivNoData"
+        android:layout_width="@dimen/dp147"
+        android:layout_height="@dimen/dp99"
+        android:layout_above="@id/tvNoDataTip"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/dp8"
+        android:src="@drawable/hp_nodate" />
+
+    <!--<TextView-->
+        <!--android:id="@+id/tvNoDataTip"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:layout_marginTop="@dimen/dp18"-->
+        <!--android:gravity="center"-->
+        <!--android:paddingLeft="@dimen/dp36"-->
+        <!--android:text="对不起，您还未有接到订单哦~"-->
+        <!--android:textColor="@color/c898989"-->
+        <!--android:textSize="@dimen/sp12" />-->
+
+    <!--<ImageView-->
+        <!--android:layout_width="@dimen/dp100"-->
+        <!--android:layout_height="@dimen/dp80"-->
+        <!--android:layout_above="@id/tvNoDataTip"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_marginBottom="@dimen/dp8"-->
+        <!--android:src="@drawable/empty_nodata" />-->
+
+
+    <!--<com.airbnb.lottie.LottieAnimationView xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--android:id="@+id/animation_view"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--app:lottie_autoPlay="true"-->
+    <!--app:lottie_fileName="lottiejsonfile/cloud_disconnection.json"-->
+    <!--app:lottie_loop="true"-->
+    <!--app:lottie_scale="0.3" />-->
+    <!--app:lottie_fileName="anim/sz_loading.json"-->
+
+</RelativeLayout>

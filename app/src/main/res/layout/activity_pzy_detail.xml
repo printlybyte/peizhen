@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cf7f8f8"
+    android:orientation="vertical"
+    tools:context=".ui.order.PzyDetailActivity">
+
+    <com.yinfeng.wypzh.widget.TopBar
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/mSmartRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp12"
+                    android:layout_marginRight="@dimen/dp12"
+                    android:layout_marginTop="@dimen/dp12"
+                    android:background="@drawable/shape_white_solid_corner_small"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dp24">
+
+                    <ImageView
+                        android:id="@+id/ivheader"
+                        android:layout_width="@dimen/dp50"
+                        android:layout_height="@dimen/dp50"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/head_default_order_servicing" />
+
+                    <TextView
+                        android:id="@+id/tvName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/dp8"
+                        android:gravity="center"
+                        android:text="周晓彤"
+                        android:textColor="@color/c434343"
+                        android:textSize="@dimen/sp16" />
+
+                    <TextView
+                        android:id="@+id/tvDesc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp4"
+                        android:gravity="center"
+                        android:maxLines="2"
+                        android:text="高级陪诊员"
+                        android:textColor="@color/c434343"
+                        android:textSize="@dimen/sp10" />
+
+                    <LinearLayout
+                        android:id="@+id/llStars"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp6"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/ivStar1"
+                            android:layout_width="@dimen/dp22"
+                            android:layout_height="@dimen/dp22"
+                            android:src="@drawable/star_selected" />
+
+                        <ImageView
+                            android:id="@+id/ivStar2"
+                            android:layout_width="@dimen/dp22"
+                            android:layout_height="@dimen/dp22"
+                            android:layout_marginLeft="@dimen/dp12"
+                            android:src="@drawable/star_selected" />
+
+                        <ImageView
+                            android:id="@+id/ivStar3"
+                            android:layout_width="@dimen/dp22"
+                            android:layout_height="@dimen/dp22"
+                            android:layout_marginLeft="@dimen/dp12"
+                            android:src="@drawable/star_selected" />
+
+                        <ImageView
+                            android:id="@+id/ivStar4"
+                            android:layout_width="@dimen/dp22"
+                            android:layout_height="@dimen/dp22"
+                            android:layout_marginLeft="@dimen/dp12"
+                            android:src="@drawable/star_selected" />
+
+                        <ImageView
+                            android:id="@+id/ivStar5"
+                            android:layout_width="@dimen/dp22"
+                            android:layout_height="@dimen/dp22"
+                            android:layout_marginLeft="@dimen/dp12"
+                            android:src="@drawable/star_selected" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp6"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tvServiceNumb"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="12"
+                                android:textColor="@color/c434343"
+                                android:textSize="@dimen/sp12" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp2"
+                                android:gravity="center"
+                                android:text="服务次数"
+                                android:textColor="@color/c434343"
+                                android:textSize="@dimen/sp12" />
+                        </LinearLayout>
+
+                        <!--<LinearLayout-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:gravity="center_horizontal"-->
+                        <!--android:orientation="vertical">-->
+
+                        <!--<TextView-->
+                        <!--android:id="@+id/tvPraiseRate"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:gravity="center"-->
+                        <!--android:text="99%"-->
+                        <!--android:textColor="@color/c434343"-->
+                        <!--android:textSize="@dimen/sp12" />-->
+
+                        <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginTop="@dimen/dp2"-->
+                        <!--android:gravity="center"-->
+                        <!--android:text="好评率"-->
+                        <!--android:textColor="@color/c434343"-->
+                        <!--android:textSize="@dimen/sp12" />-->
+                        <!--</LinearLayout>-->
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tvAge"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="30岁"
+                                android:textColor="@color/c434343"
+                                android:textSize="@dimen/sp12" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp2"
+                                android:gravity="center"
+                                android:text="年龄"
+                                android:textColor="@color/c434343"
+                                android:textSize="@dimen/sp12" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llServiceName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp12"
+                    android:layout_marginRight="@dimen/dp12"
+                    android:layout_marginTop="@dimen/dp12"
+                    android:background="@drawable/shape_white_solid_corner_small"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dp12">
+
+                    <TextView
+                        android:layout_width="@dimen/dp64"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical|left"
+                        android:text="服务说明"
+                        android:textColor="@color/c434343"
+                        android:textSize="@dimen/sp14" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/mRecyclerViewServiceName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp12"
+                        android:overScrollMode="never" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp12"
+                    android:layout_marginRight="@dimen/dp12"
+                    android:layout_marginTop="@dimen/dp6"
+                    android:background="@drawable/shape_white_solid_corner_small"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dp12">
+
+                    <TextView
+                        android:layout_width="@dimen/dp64"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical|left"
+                        android:text="持有证件"
+                        android:textColor="@color/c434343"
+                        android:textSize="@dimen/sp14" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/mRecyclerViewCertificate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp12"
+                        android:overScrollMode="never" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llComments"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp12"
+                    android:layout_marginRight="@dimen/dp12"
+                    android:layout_marginTop="@dimen/dp6"
+                    android:background="@drawable/shape_white_solid_corner_small"
+                    android:gravity="left"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/dp12"
+                    android:paddingLeft="@dimen/dp12"
+                    android:paddingRight="@dimen/dp12"
+                    android:paddingTop="@dimen/dp12">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical|left"
+                        android:text="用户评价"
+                        android:textColor="@color/c434343"
+                        android:textSize="@dimen/sp14" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/mRecyclerViewConsumerComments"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="@dimen/dp6" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvExpand"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp36"
+                    android:gravity="center"
+                    android:text="全部展开 >>"
+                    android:textColor="@color/c434343"
+                    android:textSize="@dimen/sp12" />
+            </LinearLayout>
+        </ScrollView>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <TextView
+        android:id="@+id/tvConsult"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp48"
+        android:background="@color/c06b49b"
+        android:gravity="center"
+        android:text="咨询"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/sp16" />
+</LinearLayout>

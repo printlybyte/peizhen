@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#06b49b</color>
+    <color name="colorPrimaryDark">#06b49b</color>
+    <color name="colorAccent">#06b49b</color>
+
+    <color name="cf7f8f8">#F7F8F8</color>
+    <color name="c434343">#434343</color>
+    <color name="cf68037">#f68037</color>
+    <color name="cb5b5b5">#b5b5b5</color>
+    <color name="c06b49b">#06b49b</color>
+    <color name="c898989">#898989</color>
+    <color name="cce4755">#ce4755</color>
+    <color name="cecbdc2">#ecbdc2</color>
+    <color name="c727171">#727171</color>
+    <color name="cb5b6b6">#b5b6b6</color>
+    <color name="cbdbdbe">#bdbdbe</color>
+    <color name="c98c75c">#98c75c</color>
+    <color name="c673a1b">#673a1b</color>
+    <color name="c98c757">#98c757</color>
+    <color name="cbfbfbf">#bfbfbf</color>
+    <color name="ceeeeee">#eeeeee</color>
+    <color name="cb5b5b6">#b5b5b6</color>
+    <color name="cefefef">#efefef</color>
+    <color name="ca8ce4755">#ccce4755</color>
+    <color name="ce5e5e5e">#e5e5e5</color>
+    <color name="cf5f5f5">#f5f5f5</color>
+    <color name="c708090">#708090</color>
+
+    <color name="toast_bg">#e8000000</color>
+    <color name="tab_unselect">#fff</color>
+    <color name="tab_select">#a3a3a3</color>
+
+    <color name="dialog_permission_titile">#313131</color>
+    <color name="dialog_permission_content">#434343</color>
+    <color name="dialog_permission_confirm">#4cbf4c</color>
+
+    <color name="dialog_galleryorcapture">#313131</color>
+
+    <!--topbar-->
+    <color name="topbar_bg_color">#06b49b</color>
+    <!--topbar-->
+
+    <!--loginActivity-->
+    <color name="login_bg">#F7F8F8</color>
+    <color name="login_et_hint">#898989</color>
+    <color name="login_login">#ce4755</color>
+    <!--loginActivity-->
+    <!--首页颜色-->
+    <color name="homepage_search_hint_color">#a3a3a3</color>
+    <color name="hp_bottombar_txtcolor_default">#b5b5b6</color>
+    <color name="hp_bottombar_txtcolor_selecter">#06b49b</color>
+    <!--首页颜色-->
+
+
+    <!--百分比-开头字母 Alpha-->
+    <!--100% —FF-->
+    <!--95% — F2-->
+    <!--90% — E6-->
+    <!--85% — D9-->
+    <!--80% — CC-->
+    <!--75% — BF-->
+    <!--70% — B3-->
+    <!--65% — A6-->
+    <!--60% — 99-->
+    <!--55% — 8C-->
+    <!--50% — 80-->
+    <!--45% — 73-->
+    <!--40% — 66-->
+    <!--35% — 59-->
+    <!--30% — 4D-->
+    <!--25% — 40-->
+    <!--20% — 33-->
+    <!--15% — 26-->
+    <!--10% — 1A-->
+    <!--5% — 0D-->
+    <!--0% — 00-->
+</resources>

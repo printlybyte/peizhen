@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/ripple_white_solid_corner2_new"
+    android:clickable="true"
+    android:orientation="vertical"
+    android:paddingBottom="6dp"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp"
+    android:paddingTop="6dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="54dip">
+
+        <FrameLayout
+            android:id="@+id/portrait_panel"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true">
+
+            <ImageView
+                android:id="@+id/img_head"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_gravity="center_vertical" />
+            <!--<com.netease.nim.uikit.common.ui.imageview.HeadImageView-->
+                <!--android:id="@+id/img_head"-->
+                <!--android:layout_width="42dp"-->
+                <!--android:layout_height="42dp"-->
+                <!--android:layout_gravity="center_vertical" />-->
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tv_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="126dp"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@id/portrait_panel"
+            android:ellipsize="end"
+            android:includeFontPadding="false"
+            android:singleLine="true"
+            android:textColor="#434343"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:id="@+id/content_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/portrait_panel"
+            android:layout_below="@id/tv_nickname"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="40dip"
+            android:layout_marginTop="6dp"
+            android:layout_toRightOf="@id/portrait_panel"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_online_state"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="6dp"
+                android:gravity="center_vertical"
+                android:lines="1"
+                android:textColor="#838383"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/img_msg_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="6dp"
+                android:contentDescription="@string/empty"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/tv_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:autoLink="none"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:lines="1"
+                android:scrollHorizontally="true"
+                android:textColor="#838383"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_date_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="10dip"
+            android:textColor="#838383"
+            android:textSize="12sp" />
+
+        <com.netease.nim.uikit.common.ui.drop.DropFake
+            android:id="@+id/unread_number_tip"
+            android:layout_width="28dip"
+            android:layout_height="28dip"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/tv_nickname"
+            android:layout_marginRight="6dip"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/unread_number_explosion"
+            android:layout_width="35dip"
+            android:layout_height="35dip"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/tv_nickname"
+            android:layout_marginRight="6dip"
+            android:gravity="center"
+            android:visibility="gone" />
+    </RelativeLayout>
+</LinearLayout>

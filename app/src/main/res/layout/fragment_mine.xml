@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cf7f8f8"
+    android:orientation="vertical">
+
+    <com.yinfeng.wypzh.widget.TopBar
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/mSmartRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:overScrollMode="never"
+
+            android:scrollbars="none">
+
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dp12">
+
+                    <ImageView
+                        android:id="@+id/ivHeadIcon"
+                        android:layout_width="@dimen/dp58"
+                        android:layout_height="@dimen/dp58"
+                        android:layout_marginTop="@dimen/dp28"
+                        android:src="@drawable/header_default" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp12"
+                        android:layout_marginBottom="@dimen/dp24"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center"
+                            android:text="姓名"
+                            android:textColor="@color/c434343"
+                            android:textSize="@dimen/sp14" />
+
+                        <ImageView
+                            android:id="@+id/ivLevel"
+                            android:layout_width="@dimen/dp54"
+                            android:layout_height="@dimen/dp16"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/dp16"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/level_putong" />
+                    </LinearLayout>
+
+                    <!--<LinearLayout-->
+                    <!--android:id="@+id/llWallet"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="@dimen/dp50"-->
+                    <!--android:background="@drawable/shape_white_solid_corner_small"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:paddingLeft="@dimen/dp12">-->
+
+                    <!--<ImageView-->
+                    <!--android:layout_width="@dimen/dp28"-->
+                    <!--android:layout_height="@dimen/dp26"-->
+                    <!--android:src="@drawable/wallet" />-->
+
+                    <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_marginLeft="@dimen/dp6"-->
+                    <!--android:gravity="center"-->
+                    <!--android:text="@string/mine_wallet"-->
+                    <!--android:textColor="@color/c434343"-->
+                    <!--android:textSize="@dimen/sp14" />-->
+                    <!--</LinearLayout>-->
+
+                    <LinearLayout
+                        android:id="@+id/llInvite"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp50"
+                        android:layout_marginTop="@dimen/dp6"
+                        android:background="@drawable/shape_white_solid_corner_small"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/dp12">
+
+                        <ImageView
+                            android:layout_width="@dimen/dp28"
+                            android:layout_height="@dimen/dp26"
+                            android:src="@drawable/invite" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/dp6"
+                            android:gravity="center"
+                            android:text="@string/mine_invite"
+                            android:textColor="@color/c434343"
+                            android:textSize="@dimen/sp14" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llCoupon"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp50"
+                        android:layout_marginTop="@dimen/dp6"
+                        android:background="@drawable/shape_white_solid_corner_small"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/dp12">
+
+                        <ImageView
+                            android:layout_width="@dimen/dp28"
+                            android:layout_height="@dimen/dp26"
+                            android:src="@drawable/coupon" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/dp6"
+                            android:gravity="center"
+                            android:text="@string/mine_coupon"
+                            android:textColor="@color/c434343"
+                            android:textSize="@dimen/sp14" />
+                    </LinearLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/rlSet"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp50"
+                        android:layout_marginTop="@dimen/dp6"
+                        android:background="@drawable/shape_white_solid_corner_small"
+                        android:paddingLeft="@dimen/dp12">
+
+                        <ImageView
+                            android:id="@+id/ivSet"
+                            android:layout_width="@dimen/dp28"
+                            android:layout_height="@dimen/dp26"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/set" />
+
+                        <TextView
+                            android:id="@+id/tvSet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/dp6"
+                            android:layout_toRightOf="@id/ivSet"
+                            android:gravity="center"
+                            android:text="@string/mine_set"
+                            android:textColor="@color/c434343"
+                            android:textSize="@dimen/sp14" />
+
+                        <ImageView
+                            android:id="@+id/ivRedPoint"
+                            android:layout_width="@dimen/dp8"
+                            android:layout_height="@dimen/dp8"
+                            android:layout_marginLeft="@dimen/dp6"
+                            android:layout_marginTop="@dimen/dp16"
+                            android:layout_toRightOf="@id/tvSet"
+                            android:background="@drawable/shape_oval_red"
+                            android:visibility="invisible" />
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="17dp"
+                        android:layout_gravity="center_horizontal"
+                        android:text="相关"
+                        android:textColor="@color/color_black_ff666666"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/activity_login2_user_protocol"
+                        android:layout_width="wrap_content"
+                        android:layout_height="17dp"
+                        android:layout_gravity="center_horizontal"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:text="《用户协议》"
+                        android:textColor="@color/c06b49b"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="17dp"
+                        android:layout_gravity="center_horizontal"
+                        android:text="与"
+                        android:textColor="@color/color_black_ff666666"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/activity_login2_privacy_policy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="17dp"
+                        android:layout_gravity="center_horizontal"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:text="《隐私政策》"
+                        android:textColor="@color/c06b49b"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </RelativeLayout>
+        </ScrollView>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</LinearLayout>

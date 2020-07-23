@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="statusbarutil_fake_status_bar_view" type="id" />
+    <item name="statusbarutil_translucent_view" type="id" />
+
+    <item name="bottombaricon" type="id" />
+    <item name="bottombartext" type="id" />
+    <item name="bottombarredpoint" type="id" />
+    <item name="bottombarbadgeView" type="id" />
+
+    <!-- 首页消息 订单提醒红色数字-->
+    <item name="messageOrderNoticeRedNumb" type="id" />
+    <!-- 首页消息 订单提醒红色数字-->
+</resources>

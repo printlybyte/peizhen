@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llItem"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp100"
+    android:layout_marginLeft="@dimen/dp24"
+    android:layout_marginRight="@dimen/dp24"
+    android:layout_marginTop="@dimen/dp12"
+    android:background="@drawable/shape_white_solid_corner_small"
+    android:orientation="horizontal">
+
+    <View
+        android:layout_width="@dimen/dp10"
+        android:layout_height="@dimen/dp100"
+        android:background="@drawable/shape_green_solid_left_halfcorners" />
+
+    <ImageView
+        android:layout_width="@dimen/dp43"
+        android:layout_height="@dimen/dp43"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/dp12"
+        android:src="@drawable/freevoucher_icon" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/dp12"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|left"
+                android:text="免单券"
+                android:textColor="@color/c06b49b"
+                android:textSize="@dimen/sp16" />
+
+            <TextView
+                android:id="@+id/tvUse"
+                android:layout_width="@dimen/dp64"
+                android:layout_height="@dimen/dp21"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/dp14"
+                android:background="@drawable/shape_green_solid_corner10"
+                android:gravity="center"
+                android:text="立即使用"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/sp12" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvValidTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp8"
+            android:gravity="center_vertical|left"
+            android:text="有效期：2018.06.17至2018.06.26"
+            android:textColor="@color/c434343"
+            android:textSize="@dimen/sp12" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:gravity="center"
+    android:orientation="vertical">
+    <!--android:background="@drawable/hp_bg"-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--<RelativeLayout-->
+            <!--android:id="@+id/chibangAndLogo"-->
+            <!--android:layout_width="@dimen/dp236"-->
+            <!--android:layout_height="@dimen/dp150"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:layout_marginTop="@dimen/dp58">-->
+
+            <!--<ImageView-->
+                <!--android:id="@+id/chibang"-->
+                <!--android:layout_width="@dimen/dp236"-->
+                <!--android:layout_height="@dimen/dp150"-->
+                <!--android:layout_centerHorizontal="true"-->
+                <!--android:src="@drawable/hp_chibang" />-->
+
+            <!--<ImageView-->
+                <!--android:id="@+id/logo"-->
+                <!--android:layout_width="@dimen/dp77"-->
+                <!--android:layout_height="@dimen/dp86"-->
+                <!--android:layout_centerInParent="true"-->
+                <!--android:scaleType="centerInside"-->
+                <!--android:src="@drawable/hp_logo" />-->
+        <!--</RelativeLayout>-->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/hushi"-->
+            <!--android:layout_width="@dimen/dp93"-->
+            <!--android:layout_height="@dimen/dp133"-->
+            <!--android:layout_alignRight="@id/chibangAndLogo"-->
+            <!--android:layout_marginRight="@dimen/dp12"-->
+            <!--android:scaleType="centerInside"-->
+            <!--android:src="@drawable/hp_hushi" />-->
+
+        <!--<Button-->
+            <!--android:id="@+id/btSubscribeOnline"-->
+            <!--android:layout_width="@dimen/dp173"-->
+            <!--android:layout_height="@dimen/dp48"-->
+            <!--android:layout_below="@id/chibangAndLogo"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:layout_marginTop="-13dp"-->
+            <!--android:background="@drawable/hp_bt"-->
+            <!--android:gravity="center"-->
+            <!--android:text="@string/hp_subscribleonline"-->
+            <!--android:textColor="@android:color/white"-->
+            <!--android:textSize="@dimen/sp18" />-->
+       <ImageView
+           android:layout_marginTop="@dimen/dp58"
+           android:id="@+id/ivLogoAndChild"
+           android:layout_centerHorizontal="true"
+           android:layout_width="@dimen/dp167"
+           android:src="@drawable/logoandchild"
+           android:layout_height="@dimen/dp205" />
+        <Button
+            android:id="@+id/btSubscribeOnline"
+            android:layout_width="@dimen/dp173"
+            android:layout_height="@dimen/dp48"
+            android:layout_below="@id/ivLogoAndChild"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="-13dp"
+            android:background="@drawable/hp_bt"
+            android:gravity="center"
+            android:text="@string/hp_subscribleonline"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp18" />
+        <LinearLayout
+            android:id="@+id/serviceAndQuestion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btSubscribeOnline"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp12"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="invisible">
+
+            <ImageView
+                android:layout_width="@dimen/dp17"
+                android:layout_height="@dimen/dp17"
+                android:scaleType="fitCenter"
+                android:src="@drawable/hp_serviceandquestion" />
+
+            <TextView
+                android:id="@+id/tvServiceAndQuestion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_4"
+                android:text="@string/hp_serviceandquestion"
+                android:textColor="#434343" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="@dimen/dp293"
+            android:layout_height="@dimen/dp192"
+            android:layout_below="@id/serviceAndQuestion"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp8"
+            android:scaleType="fitCenter"
+            android:src="@drawable/hp_city" />
+    </RelativeLayout>
+</LinearLayout>
